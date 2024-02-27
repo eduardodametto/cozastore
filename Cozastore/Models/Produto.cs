@@ -52,4 +52,6 @@ public class Produto
     public int CategoriaId { get; set; }
     [ForeignKey("CategoriaId")]
     public Categoria Categoria { get; set; }
+
+    public ICollection<Estoque> Estoque { get; set; }
 }
