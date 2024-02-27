@@ -5,3 +5,10 @@ git config --global user.email eduardodametto@etec.sp.gov.br
 Criar o projeto
 dotnet new mvc -o Cozastore
 
+Nuget Gallery
+    Shift + Ctrl + P
+    - Pesquisar e instalar:
+        EntityFrameworkCore
+        EntityFrameworkCore.Desing
+        EntityFrameworkCore.InMemory
+        AspNetCore.Identity.EntityFrameworkCore
