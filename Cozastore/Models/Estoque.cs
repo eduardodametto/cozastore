@@ -20,13 +20,13 @@ public class Estoque
     [Required(ErrorMessage = "Por favor, informe o tamanho")]
     public int TamanhoId { get; set; }
     [ForeignKey("TamanhoId")]
-     public Produto Tamanho { get; set; }
+    public Tamanho Tamanho { get; set; }
 
     [Display(Name = "Cor")]
     [Required(ErrorMessage = "Informe a cor")]
     public int CorId { get; set; }
     [ForeignKey("CorId")]
-     public Cor Cor { get; set; }
+    public Cor Cor { get; set; }
 
     [Display(Name = "Preço")]
     [Column(TypeName = "decimal(10,2)")] //99.999.999,99
