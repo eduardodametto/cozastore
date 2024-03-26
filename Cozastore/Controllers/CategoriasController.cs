@@ -64,7 +64,14 @@ public class CategoriasController : Controller
             if (Foto != null)
             {
                 string fileName = categoria.Id + Path.GetExtension(Foto.FileName);
-                
+                string upload = Path.Combine(_host.WebRootPath, "img\\categorias");
+                string newFile = Path.Combine(upload, fileName);
+                using(var stream = new FileStream(newFile, FileMode.Create))
+                {
+                    Foto.CopyTo(stream);
+                }
+                categoria.Foto = "\\img\\categorias\\" + fileName;
+                await _context.SaveChangesAsync();
             }
             return RedirectToAction(nameof(Index));
         }
