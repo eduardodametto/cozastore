@@ -1,6 +1,8 @@
 configurar o Git local
 git config --global user.name EduardoDametto
 git config --global user.email eduardodametto@etec.sp.gov.br
+git config --global user.name EduardoDametto25
+git config --global user.email damettoed@gmail.com
 
 Criar o projeto
 dotnet new mvc -o Cozastore
@@ -32,3 +34,6 @@ Criar um Controller - CRUD:
 dotnet-aspnet-codegenerator controller -name CoresController -m Cor -dc AppDbContext --relativeFolderPath Controllers -udl
 dotnet-aspnet-codegenerator controller -name CategoriasController -m Categoria -dc AppDbContext --relativeFolderPath Controllers -udl
 dotnet-aspnet-codegenerator controller -name TamanhosController -m Tamanho -dc AppDbContext --relativeFolderPath Controllers -udl
+
+dotnet watch run 
+//para iniciar o projeto
