@@ -38,5 +38,5 @@ public class Estoque
 
     [Display(Name = "Qtde em Estoque")]
     [Required(ErrorMessage = "Por favor, informe a Qtde em Estoque")]
-    public int Qtde { get; set; } = 0;
+    public int QtdeEstoque { get; set; } = 0;
 }
