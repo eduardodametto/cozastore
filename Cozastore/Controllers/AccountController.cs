@@ -68,6 +68,15 @@ public class AccountController : Controller
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+   [HttpPost]
+   [ValidateAntiForgeryToken]
+   public async Task<IActionResult> Logout()
+   {
+        _logger.LogInformation($"Usuário {ClaimTypes.Email} saiu do sistema!");
+        await _signInManager.SignInAsync();
+        return RedirectToAction("Index", "Home");
+   }
+   
     public IActionResult Error()
     {
         return View("Error!");
